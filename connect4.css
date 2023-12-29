@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to left, #242fc7, #3b588f);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 2px #666;
+  position: relative; 
+  background-color: whitesmoke;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+ position: absolute;
+bottom: 0;
+  left: calc(50% - 5px);
+  transform: translateX(-50%);
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* removed hard coded colors*/
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+  cursor: pointer;
+}
+
+#column-top td:hover {
+  background-color: teal;
+}
+
+#game {
+  margin: auto;
+  text-align: center;
+}
+
+#board {
+  border-collapse: collapse;
+  margin: 20px auto;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom right, whitesmoke, grey);
+}
+
+button, input[type='color'] {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+button:hover, input[type='color']:hover{
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+  text-align: center;
+  margin: 20px;
+}
+.controls >div {
+  margin-bottom: 10px;
+
+}
+#start-game{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1 ease;
+  margin-left: 75px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+ 
+}
+#start-game:active{
+  transform: translate(5px, -5px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+label {
+  margin-right: 10px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player-label{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  color: black;
+}
