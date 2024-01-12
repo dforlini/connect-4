@@ -11,8 +11,6 @@ class Game {
     this.currPlayer = 0; // index of active player in the arr
     this.board = []; //arr of rows
     this.gameOver = false;
-    this.makeBoard();
-    this.makeHtmlBoard();
   }
 
 
